@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 16</title>
+</head>
+<body>
+
+    <button onclick="verificarConceito()">Verificar Conceito</button>
+
+    <script>
+        function verificarConceito() {
+            let conceito = prompt("Digite o conceito do aluno (A, B, C, D, E ou F):");
+            conceito = conceito.toUpperCase();
+
+            switch (conceito) {
+                case "A":
+                    alert("Excelente");
+                    break;
+                case "B":
+                    alert("Ótimo");
+                    break;
+                case "C":
+                    alert("Bom");
+                    break;
+                case "D":
+                    alert("Regular");
+                    break;
+                case "E":
+                    alert("Ruim");
+                    break;
+                case "F":
+                    alert("Nos vemos de novo ano que vem...");
+                    break;
+                default:
+                    alert("Erro! Conceito inexistente.");
+            }
+        }
+    </script>
+
+</body>
+</html>

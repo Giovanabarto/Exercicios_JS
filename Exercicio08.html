@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 08 - Conceito do Aluno</title>
+</head>
+<body>
+
+    <script>
+        let conceito = prompt("Digite o conceito do aluno (A, B, C, D, E ou F):");
+        conceito = conceito.toUpperCase();
+
+        switch (conceito) {
+            case "A":
+                alert("Excelente");
+                document.write("<h2>Conceito: A</h2>");
+                document.write("<p>Significado: Excelente</p>");
+                break;
+
+            case "B":
+                alert("Ótimo");
+                document.write("<h2>Conceito: B</h2>");
+                document.write("<p>Significado: Ótimo</p>");
+                break;
+
+            case "C":
+                alert("Bom");
+                document.write("<h2>Conceito: C</h2>");
+                document.write("<p>Significado: Bom</p>");
+                break;
+
+            case "D":
+                alert("Regular");
+                document.write("<h2>Conceito: D</h2>");
+                document.write("<p>Significado: Regular</p>");
+                break;
+
+            case "E":
+                alert("Ruim");
+                document.write("<h2>Conceito: E</h2>");
+                document.write("<p>Significado: Ruim</p>");
+                break;
+
+            case "F":
+                alert("Nos vemos de novo ano que vem...");
+                document.write("<h2>Conceito: F</h2>");
+                document.write("<p>Significado: Nos vemos de novo ano que vem...</p>");
+                break;
+
+            default:
+                alert("Erro! Conceito inexistente.");
+                document.write("<h2>Erro!</h2>");
+                document.write("<p>Conceito inexistente.</p>");
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 14</title>
+</head>
+<body>
+
+<script>
+
+function calcularMedia(km, litros) {
+    return Math.ceil(km / litros);
+}
+
+let km = parseFloat(prompt("Digite a quantidade de quilômetros percorridos:"));
+let litros = parseFloat(prompt("Digite a quantidade de litros gastos:"));
+
+let media = calcularMedia(km, litros);
+
+alert("MÉDIA: " + media);
+
+document.write("<h2>Resultado</h2>");
+document.write("<p>Quilômetros: " + km + "</p>");
+document.write("<p>Litros: " + litros + "</p>");
+document.write("<h3>MÉDIA: " + media + " km/L</h3>");
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 19</title>
+</head>
+<body>
+
+    <button onclick="calcularDiferenca()">Calcular Diferença</button>
+
+    <script>
+        function calcularDiferenca() {
+            let num1 = parseFloat(prompt("Digite o primeiro número:"));
+            let num2 = parseFloat(prompt("Digite o segundo número:"));
+
+            let diferenca = diferencaPositiva(num1, num2);
+
+            alert("DIFERENÇA: " + diferenca);
+        }
+
+        function diferencaPositiva(a, b) {
+            return Math.abs(a - b);
+        }
+    </script>
+
+</body>
+</html>

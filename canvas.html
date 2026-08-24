@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projeto Offcanvas Bootstrap</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body{
+    background: #f4f6f9;
+    font-family: Arial, sans-serif;
+}
+
+header{
+    background: linear-gradient(135deg,#366fc3,#366fc3);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;/* */
+}
+
+section{
+    padding: 50px 20px;
+}
+</style>
+</head>
+<body>
+
+<!-- CABEÇALHO -->
+<header>
+    <h1>Bootstrap Offcanvas</h1>
+    <p>Exemplo completo utilizando todos os tipos de Offcanvas</p>
+</header>
+
+<!-- BOTÕES -->
+<section class="container text-center">
+
+    <h2 class="mb-4">Tipos de Offcanvas</h2>
+
+    <button class="btn btn-primary m-2"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#menuEsquerda">
+        Offcanvas Start
+    </button>
+
+    <button class="btn btn-success m-2"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#menuDireita">
+        Offcanvas End
+    </button>
+
+    <button class="btn btn-warning m-2"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#menuTopo">
+        Offcanvas Top
+    </button>
+
+    <button class="btn btn-danger m-2"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#menuBaixo">
+        Offcanvas Bottom
+    </button>
+
+</section>
+
+<!-- OFFCANVAS START --> <!--faz o painel abrir pela esquerda.-->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="menuEsquerda"> <!--identifica o painel para ser aberto por um botão-->
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Offcanvas Start</h5> <!--Titulo-->
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button> <!--Botão para fechar-->
+    </div>
+    
+    <div class="offcanvas-body">
+        <p>Abre pela esquerda.</p>
+
+        <ul class="list-group"> <!--Contém um texto e uma lista-->
+            <li class="list-group-item">🏠 Home</li> <!--Itens-->
+            <li class="list-group-item">📦 Produtos</li>
+            <li class="list-group-item">📞 Contato</li>
+        </ul>
+    </div>
+</div>
+
+<!-- OFFCANVAS END --> <!--faz o painel aparecer pela direita da tela-->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="menuDireita"> <!--Muito usado para menus de usuário.-->
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Offcanvas End</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+
+    <div class="offcanvas-body">
+        <p>Abre pela direita.</p>
+
+        <ul class="list-group">
+            <li class="list-group-item">👤 Perfil</li>
+            <li class="list-group-item">⚙️ Configurações</li>
+            <li class="list-group-item">🚪 Sair</li>
+        </ul>
+    </div>
+</div>
+
+<!-- OFFCANVAS TOP --> <!--faz o painel deslizar de cima para baixo.-->
+<div class="offcanvas offcanvas-top" tabindex="-1" id="menuTopo"> <!--Pode ser usado para:
+Avisos; Pesquisas; Filtros rápidos.-->
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Offcanvas Top</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+
+    <div class="offcanvas-body">
+        <p>Este painel aparece na parte superior da tela.</p>
+    </div>
+</div>
+
+<!-- OFFCANVAS BOTTOM --> <!--faz o painel surgir de baixo para cima.-->
+<div class="offcanvas offcanvas-bottom" tabindex="-1" id="menuBaixo"> <!--Muito usado em aplicativos móveis.-->
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Offcanvas Bottom</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+
+    <div class="offcanvas-body">
+        <p>Este painel aparece na parte inferior da tela.</p>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

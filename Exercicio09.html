@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 09</title>
+</head>
+<body>
+
+<script>
+
+let dias = Number(prompt("Digite a quantidade de dias do mês (28, 30 ou 31):"));
+
+switch (dias) {
+    case 28:
+        alert("Mês: 02 (Fevereiro)");
+        document.write("<h2>Meses com 28 dias</h2>");
+        document.write("<p>02 - Fevereiro</p>");
+        break;
+
+    case 30:
+        alert("Meses: 04, 06, 09 e 11");
+        document.write("<h2>Meses com 30 dias</h2>");
+        document.write("<p>04 - Abril</p>");
+        document.write("<p>06 - Junho</p>");
+        document.write("<p>09 - Setembro</p>");
+        document.write("<p>11 - Novembro</p>");
+        break;
+
+    case 31:
+        alert("Meses: 01, 03, 05, 07, 08, 10 e 12");
+        document.write("<h2>Meses com 31 dias</h2>");
+        document.write("<p>01 - Janeiro</p>");
+        document.write("<p>03 - Março</p>");
+        document.write("<p>05 - Maio</p>");
+        document.write("<p>07 - Julho</p>");
+        document.write("<p>08 - Agosto</p>");
+        document.write("<p>10 - Outubro</p>");
+        document.write("<p>12 - Dezembro</p>");
+        break;
+
+    default:
+        alert("Erro! Quantidade de dias inválida.");
+        document.write("<h2>Erro!</h2>");
+        document.write("<p>Digite apenas 28, 30 ou 31.</p>");
+}
+
+</script>
+
+</body>
+</html>

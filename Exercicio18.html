@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 18</title>
+</head>
+<body>
+
+    <button onclick="calcularMedia()">Calcular Média</button>
+
+    <script>
+        function calcularMedia() {
+
+            let km = parseFloat(prompt("Digite a quantidade de quilômetros:"));
+            let litros = parseFloat(prompt("Digite a quantidade de litros:"));
+
+            let media = Math.ceil(km / litros);
+
+            alert("MÉDIA: " + media);
+        }
+    </script>
+
+</body>
+</html>

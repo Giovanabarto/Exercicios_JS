@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 22</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(90deg, #232b31, #a9c2df);
+            padding: 40px;
+        }
+
+        .formulario {
+            background-color: white;
+            width: 400px;
+            padding: 30px;
+            border-radius: 10px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #222;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #9bc5ef;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="formulario">
+
+        <h1>CADASTRO GERAL</h1>
+
+        <form>
+
+            <input type="text" id="c_nome" placeholder="Nome">
+
+            <input type="text" id="c_sobrenome" placeholder="Sobrenome">
+
+            <input type="text" id="c_cidade" placeholder="Cidade">
+
+            <input type="text" id="c_estado" placeholder="Estado">
+
+            <input type="text" id="c_cep" placeholder="CEP">
+
+            <input type="email" id="c_email" placeholder="Seu email">
+
+            <input type="file" id="c_foto">
+
+            <br><br>
+
+            <input type="checkbox" id="termos">
+            Aceito os termos e condições
+
+            <br><br>
+
+            <button id="b_enviar" type="submit">Enviar</button>
+
+        </form>
+
+    </div>
+
+    <script>
+
+        // Exercício 12
+        // Selecionar elementos do DOM pelo método getElementById()
+
+        // a) Campo Nome
+        let campoNome = document.getElementById("c_nome");
+
+        // b) Campo Estado
+        let campoEstado = document.getElementById("c_estado");
+
+        // c) Botão Enviar
+        let botaoEnviar = document.getElementById("b_enviar");
+
+    </script>
+
+</body>
+</html>

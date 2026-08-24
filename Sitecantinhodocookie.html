@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>O Cantinho do Cookie</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+
+background:#F7EFE8;
+
+}
+
+/* HEADER */
+
+header{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 80px;
+background:rgba(76,50,38,.95);
+backdrop-filter:blur(10px);
+z-index:999;
+
+}
+
+.logo img{
+
+width:150px;
+
+}
+
+nav{
+
+display:flex;
+gap:35px;
+
+}
+
+nav a{
+
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#D8A46A;
+
+}
+
+/* HERO */
+
+.hero{
+
+min-height:100vh;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:150px 90px 80px;
+background:linear-gradient(135deg,#F7EFE8,#EAD8C9);
+
+}
+
+.hero-text{
+
+width:50%;
+
+}
+
+.hero-text span{
+
+color:#A76A3C;
+font-weight:600;
+letter-spacing:2px;
+
+}
+
+.hero-text h1{
+
+font-size:65px;
+color:#4A2E21;
+line-height:75px;
+margin:20px 0;
+
+}
+
+.hero-text p{
+
+font-size:18px;
+line-height:32px;
+color:#71574A;
+margin-bottom:35px;
+
+}
+
+.buttons{
+
+display:flex;
+gap:20px;
+
+}
+
+.btn{
+
+background:#7B4A2E;
+color:white;
+padding:15px 35px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+
+}
+
+.btn:hover{
+
+background:#A76A3C;
+
+}
+
+.btn2{
+
+border:2px solid #7B4A2E;
+padding:15px 35px;
+border-radius:50px;
+text-decoration:none;
+color:#7B4A2E;
+font-weight:600;
+transition:.3s;
+
+}
+
+.btn2:hover{
+
+background:#7B4A2E;
+color:white;
+
+}
+
+.hero-img{
+
+width:45%;
+display:flex;
+justify-content:center;
+
+}
+
+.hero-img img{
+
+width:100%;
+max-width:600px;
+animation:flutuar 4s ease-in-out infinite;
+
+}
+
+@keyframes flutuar{
+
+0%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+100%{transform:translateY(0);}
+
+}
+
+/* DIFERENCIAIS */
+
+.diferenciais{
+
+padding:100px 90px;
+
+}
+
+.titulo{
+
+text-align:center;
+font-size:42px;
+color:#4A2E21;
+margin-bottom:15px;
+
+}
+
+.sub{
+
+text-align:center;
+color:#81675B;
+margin-bottom:70px;
+
+}
+
+.cards{
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+
+}
+
+.card{
+
+background:white;
+padding:40px;
+border-radius:25px;
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.card img{
+
+width:70px;
+margin-bottom:20px;
+
+}
+
+.card h3{
+
+font-size:24px;
+color:#4A2E21;
+margin-bottom:15px;
+
+}
+
+.card p{
+
+color:#6B5549;
+line-height:28px;
+
+}
+
+/* COOKIES */
+
+.cookies{
+
+padding:90px;
+
+background:#FFF9F4;
+
+}
+
+.produtos{
+
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+
+}
+
+.produto{
+
+background:white;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+transition:.3s;
+
+}
+
+.produto:hover{
+
+transform:translateY(-8px);
+
+}
+
+.produto img{
+
+width:100%;
+height:260px;
+object-fit:cover;
+
+}
+
+.produto-info{
+
+padding:25px;
+
+}
+
+.produto-info h3{
+
+font-size:24px;
+margin-bottom:10px;
+color:#4A2E21;
+
+}
+
+.produto-info p{
+
+color:#8B6E5D;
+margin-bottom:15px;
+
+}
+
+.preco{
+
+font-size:22px;
+font-weight:700;
+color:#A76A3C;
+
+}
+
+.comprar{
+
+margin-top:20px;
+display:inline-block;
+background:#7B4A2E;
+color:white;
+padding:12px 28px;
+border-radius:30px;
+text-decoration:none;
+transition:.3s;
+
+}
+
+.comprar:hover{
+
+background:#A76A3C;
+
+}
+/* ================= ESPAÇO FILMES ================= */
+
+.filmes{
+
+padding:100px 90px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:60px;
+background:#F4E6DA;
+
+}
+
+.filmes-texto{
+
+width:45%;
+
+}
+
+.filmes-texto h2{
+
+font-size:42px;
+color:#4A2E21;
+margin-bottom:20px;
+
+}
+
+.filmes-texto p{
+
+font-size:18px;
+line-height:32px;
+color:#6B5549;
+margin-bottom:35px;
+
+}
+
+.filmes-img{
+
+width:50%;
+
+}
+
+.filmes-img img{
+
+width:100%;
+border-radius:25px;
+box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+}
+
+/* ================= DEPOIMENTOS ================= */
+
+.depoimentos{
+
+padding:100px 90px;
+
+}
+
+.comentarios{
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+
+}
+
+.comentario{
+
+background:white;
+padding:35px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.comentario h3{
+
+color:#4A2E21;
+margin-bottom:15px;
+
+}
+
+.comentario p{
+
+line-height:28px;
+color:#6B5549;
+
+}
+
+/* ================= CONTATO ================= */
+
+.contato{
+
+padding:100px 90px;
+background:#4A2E21;
+color:white;
+text-align:center;
+
+}
+
+.contato h2{
+
+font-size:40px;
+margin-bottom:20px;
+
+}
+
+.contato p{
+
+font-size:18px;
+line-height:32px;
+margin-bottom:30px;
+
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+
+background:#2F1E17;
+color:white;
+text-align:center;
+padding:25px;
+
+}
+
+@media(max-width:900px){
+
+.hero,
+.filmes{
+
+flex-direction:column;
+
+}
+
+.hero-text,
+.hero-img,
+.filmes-texto,
+.filmes-img{
+
+width:100%;
+
+}
+
+.cards,
+.produtos,
+.comentarios{
+
+grid-template-columns:1fr;
+
+}
+
+header{
+
+padding:20px;
+
+}
+
+nav{
+
+gap:15px;
+flex-wrap:wrap;
+
+}
+
+.hero{
+
+padding:140px 30px 60px;
+
+}
+
+.diferenciais,
+.cookies,
+.filmes,
+.depoimentos,
+.contato{
+
+padding:70px 30px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<img src="logo.png">
+</div>
+
+<nav>
+
+<a href="#">Início</a>
+<a href="sobrenos.html">Sobre</a>
+<a href="cardapio.html">Cardápio</a>
+<a href="filmes.html">Filmes</a>
+<a href="contato.html">Contato</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-text">
+
+<span>🍪 O Cantinho do Cookie</span>
+
+<h1>Mais que cookies.<br>Uma experiência.</h1>
+
+<p>
+Saboreie nossos cookies artesanais enquanto assiste aos seus filmes favoritos em um ambiente aconchegante.
+</p>
+
+<div class="buttons">
+
+<a href="cardapio.html" class="btn">Ver Cardápio</a>
+
+<a href="sobrenos.html" class="btn2">Conheça a Loja</a>
+
+</div>
+
+</div>
+
+<div class="hero-img">
+
+<img src="img projeto integrador/Captura de tela 2026-07-28 103436.png">
+
+</div>
+
+</section>
+
+<section class="diferenciais">
+
+<h2 class="titulo">Por que escolher nossa loja?</h2>
+
+<p class="sub">
+Uma experiência única para quem ama doces e cinema.
+</p>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="img projeto integrador/Captura de tela 2026-07-28 103713.png">
+
+<h3>Cookies Artesanais</h3>
+
+<p>Receitas exclusivas preparadas diariamente com ingredientes selecionados.</p>
+
+</div>
+
+<div class="card">
+
+<img src="img/cinema.png">
+
+<h3>Espaço Filmes</h3>
+
+<p>Um ambiente confortável para assistir filmes enquanto aproveita nossos produtos.</p>
+
+</div>
+
+<div class="card">
+
+<img src="img/cafe.png">
+
+<h3>Ambiente Aconchegante</h3>
+
+<p>Perfeito para encontros, família ou simplesmente relaxar.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="cookies">
+
+<h2 class="titulo">Cookies da Semana</h2>
+
+<div class="produtos">
+
+<!-- Aqui você coloca os seus 4 cookies -->
+
+</div>
+
+</section>
+
+<section class="filmes">
+
+<div class="filmes-texto">
+
+<h2>Espaço Filmes</h2>
+
+<p>
+Assista aos melhores filmes enquanto aproveita um delicioso cookie gourmet. Um ambiente pensado para tornar sua visita inesquecível.
+</p>
+
+<a href="filmes.html" class="btn">Ver Filmes</a>
+
+</div>
+
+<div class="filmes-img">
+
+<img src="img/cinema.jpg">
+
+</div>
+
+</section>
+
+<section class="depoimentos">
+
+<h2 class="titulo">O que nossos clientes dizem</h2>
+
+<div class="comentarios">
+
+<div class="comentario">
+
+<h3>★★★★★</h3>
+
+<p>"Os melhores cookies da cidade. O ambiente é maravilhoso!"</p>
+
+</div>
+
+<div class="comentario">
+
+<h3>★★★★★</h3>
+
+<p>"Adorei assistir um filme enquanto tomava um chocolate quente."</p>
+
+</div>
+
+<div class="comentario">
+
+<h3>★★★★★</h3>
+
+<p>"Voltarei muitas vezes! Atendimento excelente."</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="contato">
+
+<h2>Venha conhecer nossa loja!</h2>
+
+<p>
+
+📍 Rua do Sabor, 123<br>
+
+Santa Cruz do Rio Pardo - SP<br><br>
+
+📞 (11) 99999-9999<br>
+
+✉ contato@ocantinhodocookie.com.br
+
+</p>
+
+<a href="contato.html" class="btn">Entrar em Contato</a>
+
+</section>
+
+<footer>
+
+© 2026 O Cantinho do Cookie • Todos os direitos reservados.
+
+</footer>
+
+</body>
+
+</html>
+      

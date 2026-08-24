@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Extra</title>
+</head>
+<body>
+
+<script>
+
+function calcularDiferenca(num1, num2) {
+    return Math.abs(num1 - num2);
+}
+
+let num1 = parseFloat(prompt("Digite o primeiro número:"));
+let num2 = parseFloat(prompt("Digite o segundo número:"));
+
+let diferenca = calcularDiferenca(num1, num2);
+
+alert("DIFERENÇA: " + diferenca);
+
+document.write("<h2>Resultado</h2>");
+document.write("<p>Número 1: " + num1 + "</p>");
+document.write("<p>Número 2: " + num2 + "</p>");
+document.write("<h3>DIFERENÇA: " + diferenca + "</h3>");
+
+</script>
+
+</body>
+</html>

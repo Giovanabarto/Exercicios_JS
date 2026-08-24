@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 24</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        .controle {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        select {
+            width: 100%;
+            padding: 8px;
+        }
+
+        #texto {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>Texto</h3>
+
+    <p id="texto">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Molestiae neque quaerat nulla sed numquam, quis sequi provident
+        at similique, iste perferendis autem suscipit.
+    </p>
+
+    <hr>
+
+    <!-- COR -->
+    <div class="controle">
+        <label for="cor">Cor</label>
+
+        <select id="cor">
+            <option value="black">Preto</option>
+            <option value="red">Vermelho</option>
+            <option value="blue">Azul</option>
+            <option value="green">Verde</option>
+            <option value="purple">Roxo</option>
+        </select>
+    </div>
+
+    <!-- FONTE -->
+    <div class="controle">
+        <label for="fonte">Fonte</label>
+
+        <select id="fonte">
+            <option value="Arial">Arial</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Courier New">Courier New</option>
+        </select>
+    </div>
+
+    <!-- TAMANHO -->
+    <div class="controle">
+        <label for="tamanho">Tamanho</label>
+
+        <select id="tamanho">
+            <option value="12px">12</option>
+            <option value="14px">14</option>
+            <option value="16px" selected>16</option>
+            <option value="18px">18</option>
+            <option value="20px">20</option>
+            <option value="24px">24</option>
+        </select>
+    </div>
+
+    <!-- ESTILO -->
+    <div class="controle">
+        <label for="estilo">Estilo</label>
+
+        <select id="estilo">
+            <option value="normal">Normal</option>
+            <option value="italic">Itálico</option>
+            <option value="oblique">Oblíquo</option>
+        </select>
+    </div>
+
+    <!-- PESO -->
+    <div class="controle">
+        <label for="peso">Weight</label>
+
+        <select id="peso">
+            <option value="normal">Normal</option>
+            <option value="bold">Negrito</option>
+            <option value="lighter">Leve</option>
+            <option value="bolder">Mais forte</option>
+        </select>
+    </div>
+
+    <script>
+
+        // Selecionando os elementos
+        let texto = document.getElementById("texto");
+
+        let cor = document.getElementById("cor");
+        let fonte = document.getElementById("fonte");
+        let tamanho = document.getElementById("tamanho");
+        let estilo = document.getElementById("estilo");
+        let peso = document.getElementById("peso");
+
+
+        // Alterar a COR
+        cor.addEventListener("change", function () {
+            texto.style.color = cor.value;
+        });
+
+
+        // Alterar a FONTE
+        fonte.addEventListener("change", function () {
+            texto.style.fontFamily = fonte.value;
+        });
+
+
+        // Alterar o TAMANHO
+        tamanho.addEventListener("change", function () {
+            texto.style.fontSize = tamanho.value;
+        });
+
+
+        // Alterar o ESTILO
+        estilo.addEventListener("change", function () {
+            texto.style.fontStyle = estilo.value;
+        });
+
+
+        // Alterar o PESO
+        peso.addEventListener("change", function () {
+            texto.style.fontWeight = peso.value;
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 07</title>
+</head>
+<body>
+
+<script>
+    let chovendo = prompt("Está chovendo? (sim ou não)").toLowerCase();
+    let temperatura = Number(prompt("Qual é a temperatura em °C?"));
+
+    if (chovendo === "não" || chovendo === "nao") {
+        if (temperatura > 25) {
+            alert("Vamos para a praia!");
+        } else {
+            alert("Precisamos escolher outro destino!");
+        }
+    } else {
+        alert("Precisamos escolher outro destino!");
+    }
+</script>
+
+</body>
+</html>

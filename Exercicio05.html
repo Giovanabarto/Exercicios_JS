@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BurgerClub</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#121212,#1b1b1b,#252525);
+    color:white;
+}
+
+.menu-principal{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    height:70px;
+    background:rgba(18,18,18,.95);
+    backdrop-filter:blur(10px);
+    border-top:2px solid #f3760a;
+    z-index:1000;
+}
+
+.menu-principal ul{
+    list-style:none;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    height:100%;
+}
+
+.menu-principal a{
+    text-decoration:none;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:4px;
+    transition:.3s;
+}
+
+.menu-principal a:hover{
+    color:#f3760a;
+    transform:scale(1.1);
+}
+
+.menu-principal i{
+    font-size:1.4rem;
+}
+
+.logo{
+    display:none;
+}
+
+.hero{
+    text-align:center;
+    padding:50px 20px 30px;
+}
+
+.hero h1{
+    font-size:3rem;
+    color:#f3760a;
+    margin-bottom:10px;
+}
+
+.hero p{
+    color:#ddd;
+}
+
+.grid-container{
+    display:grid;
+    gap:20px;
+    padding:20px;
+    padding-bottom:100px;
+}
+
+.bloco{
+    background:#1c1c1c;
+    border-radius:20px;
+    padding:25px;
+    border:1px solid rgba(243,118,10,.3);
+    box-shadow:0 4px 15px rgba(0,0,0,.4);
+    transition:.3s;
+}
+
+.bloco:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 25px rgba(243,118,10,.3);
+}
+
+.img-fluid{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+h3{
+    color:#f3760a;
+    margin-bottom:10px;
+}
+
+.btn-pedido{
+    display:inline-block;
+    margin-top:15px;
+    background:#f3760a;
+    color:white;
+    text-decoration:none;
+    padding:12px 25px;
+    border-radius:30px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-pedido:hover{
+    background:#ff8d2a;
+    transform:scale(1.05);
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    color:#999;
+}
+
+.contei_img{
+    display: flex;
+    justify-content: space-around;
+}
+/* modo 2
+.contei_img{
+    display: grid;
+    grid-template: auto auto / auto auto;
+    justify-content: space-around;
+}
+
+.area1{
+grid-area: 1 / 1 / 2 / 2;
+}
+.area2{
+grid-area: 2/1/3/3;
+        }
+*/
+
+@media(min-width:768px){
+
+    .menu-principal{
+        position:sticky;
+        top:0;
+        bottom:auto;
+        border-top:none;
+        border-bottom:2px solid #f3760a;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:0 40px;
+    }
+
+    .logo{
+        display:block;
+        color:#f3760a;
+        font-size:1.8rem;
+        font-weight:700;
+    }
+
+    .menu-principal ul{
+        width:auto;
+        gap:40px;
+    }
+
+    .menu-principal a{
+        flex-direction:row;
+    }
+
+    .grid-container{
+        grid-template-columns:1fr 2fr 1fr;
+    }
+
+    .top{
+        grid-column:1/4;
+    }
+
+    .final{
+        grid-column:1/4;
+    }
+/* modo 2
+.contei_img{
+    display: grid;
+    grid-template: auto  /  auto;
+    justify-content: space-around;
+}
+
+.area1{
+grid-area: 1 / 1 / 2 / 2;
+}
+.area2{
+grid-area: 1/2/2/3;
+        }
+*/
+}
+
+</style>
+</head>
+<body>
+
+<nav class="menu-principal">
+
+    <div class="logo">🍔 BurgerClub</div>
+
+    <ul>
+        <li><a href="#"><i class="bi bi-house-door"></i>Home</a></li>
+        <li><a href="#"><i class="bi bi-egg-fried"></i>Cardápio</a></li>
+        <li><a href="#"><i class="bi bi-whatsapp"></i>Pedir</a></li>
+        <li><a href="#"><i class="bi bi-info-circle"></i>Sobre</a></li>
+    </ul>
+
+</nav>
+
+<section class="hero">
+    <h1>BurgerClub</h1>
+    <p>Os melhores hambúrgueres artesanais da região 🍔🔥</p>
+</section>
+
+<main class="grid-container">
+
+    <div class="top bloco">
+        <img src="img/img 20.jpg" alt="Hambúrguer" class="img-fluid">
+    </div>
+
+    <div class="bloco">
+        <h3>🎉 Eventos</h3>
+        <p>
+            Realizamos aniversários, confraternizações e eventos especiais
+            com um espaço confortável para toda a família.
+        </p>
+    </div>
+
+    <div class="bloco">
+        <h3>🍔 Lanches e Porções</h3>
+        <p>
+            Hambúrgueres artesanais, porções crocantes, bebidas geladas e
+            sobremesas incríveis preparadas com ingredientes selecionados.
+        </p>
+        <div class="contei_img">
+            <!--<div class="area1">-->
+          <img src="img/img 16.jpg" alt="Lanche" width="120px">
+            <img src="img/img 17.jpg" alt="Lanche" width="120px">
+                    <!--</div>-->
+  
+        <!--<div class="area2">-->
+          <img src="img/img 21.webp" alt="Lanche" width="120px">
+            <img src="img/img 22.jpg" alt="Lanche" width="120px">
+                <!--</div>-->
+  
+        </div>
+
+    </div>
+
+    <div class="bloco">
+        <h3>🏠 Nosso Espaço</h3>
+        <p>
+            Ambiente climatizado, área kids, Wi-Fi gratuito e muito conforto
+            para você aproveitar com amigos e família.
+        </p>
+    </div>
+
+    <div class="final bloco">
+        <h3>📍 Contato</h3>
+
+        <p>
+            Funcionamento: Terça a Domingo das 18h às 23h.
+        </p>
+
+        <p>
+            Av. Principal, 123 - Centro
+        </p>
+
+        <a href="#" class="btn-pedido">
+            Fazer Pedido
+        </a>
+    </div>
+
+</main>
+
+<footer>
+    © 2026 BurgerClub - Todos os direitos reservados.
+</footer>
+
+</body>
+</html>

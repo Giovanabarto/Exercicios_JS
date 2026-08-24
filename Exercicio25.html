@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 25</title>
+
+    <style>
+        /* Estilo normal */
+        .campo {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #999;
+        }
+
+        /* Quando o campo estiver com foco */
+        .foco {
+            background-color: yellow;
+        }
+
+        /* Menos de 3 caracteres */
+        .vermelho {
+            background-color: red;
+        }
+
+        /* 3 caracteres ou mais */
+        .verde {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Exercício 15</h2>
+
+    <label for="campo">Digite alguma coisa:</label>
+    <br><br>
+
+    <input type="text" id="campo" class="campo">
+
+    <script>
+
+        // Seleciona o campo
+        let campo = document.getElementById("campo");
+
+
+        // Evento de FOCO
+        campo.addEventListener("focus", function () {
+
+            // Remove as classes de validação
+            campo.classList.remove("vermelho");
+            campo.classList.remove("verde");
+
+            // Adiciona a classe foco
+            campo.classList.add("foco");
+
+        });
+
+
+        // Evento de PERDA DE FOCO
+        campo.addEventListener("blur", function () {
+
+            // Recupera o valor digitado
+            let valor = campo.value;
+
+            // Remove a classe de foco
+            campo.classList.remove("foco");
+
+
+            // Verifica a quantidade de caracteres
+            if (valor.length < 3) {
+
+                campo.classList.remove("verde");
+                campo.classList.add("vermelho");
+
+            } else {
+
+                campo.classList.remove("vermelho");
+                campo.classList.add("verde");
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>

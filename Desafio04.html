@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Banco Digital - Terminal Seguro</title>
+</head>
+<body onload="iniciarCaixa()">
+
+    <h2>Banco Digital - Terminal Seguro</h2>
+
+    <label>Digite sua senha de 4 dígitos:</label><br><br>
+
+    <input type="password"
+           maxlength="4"
+           onkeydown="digitarSenha()"><br><br>
+
+    <button onclick="confirmarOperacao()">
+        Confirmar Operação
+    </button>
+
+    <script>
+
+        function iniciarCaixa() {
+            alert("Caixa Eletrônico Pronto. Insira seus dados.");
+        }
+
+        function digitarSenha() {
+            console.log("Detectando digitação segura...");
+        }
+
+        function confirmarOperacao() {
+            alert("Operação confirmada!");
+        }
+
+        window.onbeforeunload = function () {
+            return "Sair do site?";
+        };
+
+    </script>
+
+</body>
+</html>

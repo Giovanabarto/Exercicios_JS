@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Offcanvas Bootstrap</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body{
+            padding: 30px;
+            background: #f4f4f4;
+        }
+
+        h1{
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .conteudo{
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Exemplo de Offcanvas</h1>
+
+    <div class="conteudo">
+        <h2>Bootstrap Offcanvas</h2>
+
+        <p>
+            O Offcanvas é um componente do Bootstrap utilizado para criar
+            menus laterais e painéis que aparecem quando o usuário clica
+            em um botão.
+        </p>
+
+        <!-- Botão para abrir -->
+        <button class="btn btn-primary"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#menuLateral">
+            ☰ Abrir Menu
+        </button>
+    </div>
+
+    <!-- Offcanvas -->
+    <div class="offcanvas offcanvas-start"
+         tabindex="-1"
+         id="menuLateral">
+
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Menu de Navegação</h5>
+
+            <button type="button"
+                    class="btn-close"
+                    data-bs-dismiss="offcanvas">
+            </button>
+        </div>
+
+        <div class="offcanvas-body">
+            <ul class="list-group">
+                <li class="list-group-item">🏠 Home</li>
+                <li class="list-group-item">📦 Produtos</li>
+                <li class="list-group-item">📞 Contato</li>
+                <li class="list-group-item">ℹ️ Sobre</li>
+            </ul>
+
+            <hr>
+
+            <p>
+                Este é um exemplo simples de menu lateral usando o
+                componente Offcanvas do Bootstrap.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

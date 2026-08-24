@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10</title>
+</head>
+<body>
+
+<script>
+
+let A = parseFloat(prompt("Digite a primeira nota (peso 2):"));
+let B = parseFloat(prompt("Digite a segunda nota (peso 3):"));
+let C = parseFloat(prompt("Digite a terceira nota (peso 5):"));
+
+let media = ((A * 2) + (B * 3) + (C * 5)) / 10;
+
+alert("MÉDIA = " + media.toFixed(1));
+
+document.write("<h2>Resultado</h2>");
+document.write("<p>Nota A: " + A + "</p>");
+document.write("<p>Nota B: " + B + "</p>");
+document.write("<p>Nota C: " + C + "</p>");
+document.write("<h3>MÉDIA = " + media.toFixed(1) + "</h3>");
+
+</script>
+
+</body>
+</html>
